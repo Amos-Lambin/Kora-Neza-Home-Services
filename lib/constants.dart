@@ -39,3 +39,35 @@ final secondaryTextStyle12 = TextStyle(
 );
 
 const defaultDuration = Duration(milliseconds: 250);
+
+// Form Error
+final RegExp emailValidatorRegExp =
+    RegExp(r"^[a-zA-Z0-9.]+@[a-zA-Z0-9]+\.[a-zA-Z]+");
+
+const String kEmailNullError = "Please Enter your email";
+const String kInvalidEmailError = "Please Enter Valid Email";
+const String kPassNullError = "Please Enter your password";
+const String kShortPassError = "Password is too short";
+const String kMatchPassError = "Passwords don't match";
+const String kNamelNullError = "Please Enter your name";
+const String kCodeNullError = "Please Enter Postal Code";
+const String kPhoneNumberNullError = "Please Enter your phone number";
+const String kConfirmPasswordError = "Please Enter your address";
+const String kConfirmCniC = "Please Enter your CNIC";
+
+final otpInputDecoration = InputDecoration(
+  filled: true,
+  fillColor: kFormColor,
+  contentPadding:
+      EdgeInsets.symmetric(vertical: getProportionateScreenWidth(15)),
+  border: outlineInputBorder(),
+  focusedBorder: outlineInputBorder(),
+  enabledBorder: outlineInputBorder(),
+);
+
+OutlineInputBorder outlineInputBorder() {
+  return OutlineInputBorder(
+    borderRadius: BorderRadius.circular(getProportionateScreenWidth(15)),
+    borderSide: BorderSide.none,
+  );
+}
