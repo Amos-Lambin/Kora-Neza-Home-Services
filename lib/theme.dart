@@ -13,6 +13,13 @@ ThemeData theme() {
   );
 }
 
+TextTheme textTheme() {
+  return const TextTheme(
+    bodyLarge: TextStyle(color: kTextColor),
+    bodyMedium: TextStyle(color: kTextColor),
+  );
+}
+
 AppBarTheme appBarTheme() {
   return const AppBarTheme(
     color: Colors.white,
