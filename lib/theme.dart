@@ -7,8 +7,8 @@ ThemeData theme() {
     scaffoldBackgroundColor: kPrimaryBGColor,
     fontFamily: "Muli",
     appBarTheme: appBarTheme(),
-    // textTheme: textTheme(),
-    // inputDecorationTheme: inputDecorationTheme(),
+    textTheme: textTheme(),
+    inputDecorationTheme: inputDecorationTheme(),
     visualDensity: VisualDensity.adaptivePlatformDensity,
   );
 }
@@ -24,7 +24,7 @@ InputDecorationTheme inputDecorationTheme() {
     // if you r using flutter less then 1.20.* then maybe this is not working properly
     // if we are define our floatingLabelBehavior in our theme then it's not applayed
     floatingLabelBehavior: FloatingLabelBehavior.always,
-    contentPadding: EdgeInsets.symmetric(horizontal: 42, vertical: 20),
+    contentPadding: const EdgeInsets.symmetric(horizontal: 42, vertical: 20),
     enabledBorder: outlineInputBorder,
     focusedBorder: outlineInputBorder,
     border: outlineInputBorder,
@@ -43,9 +43,15 @@ AppBarTheme appBarTheme() {
     color: Colors.white,
     elevation: 0,
     iconTheme: IconThemeData(color: Colors.black),
-    // textTheme: TextTheme(
-    //   headline6: TextStyle(color: Color(0XFF8B8B8B), fontSize: 18),
-    // ),
     systemOverlayStyle: SystemUiOverlayStyle.light,
+  );
+}
+
+ThemeData appTheme() {
+  return ThemeData(
+    appBarTheme: appBarTheme(),
+    textTheme: const TextTheme(
+      titleLarge: TextStyle(color: Color(0XFF8B8B8B), fontSize: 18),
+    ),
   );
 }
