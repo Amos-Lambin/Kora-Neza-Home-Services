@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kora_neza_home_services/size_config.dart';
 
 // const kPrimaryBGColor = Color(0xFFF5F5F5);
 const kPrimaryBGColor = Color(0xFFFFFCFC);
@@ -19,3 +20,22 @@ const kTextColor = Color(0xFF000000);
 const kTextColorSecondary = Color(0xFF949494);
 
 const kAnimationDuration = Duration(milliseconds: 200);
+
+final headingStyle = TextStyle(
+  fontSize: getProportionateScreenWidth(20),
+  fontWeight: FontWeight.bold,
+  color: Colors.black,
+  height: 1.5,
+);
+
+final headingStyleWhite = TextStyle(
+  fontSize: getProportionateScreenWidth(20),
+  fontWeight: FontWeight.bold,
+  color: Colors.white,
+);
+final secondaryTextStyle12 = TextStyle(
+  fontSize: getProportionateScreenWidth(12),
+  color: kTextColorSecondary,
+);
+
+const defaultDuration = Duration(milliseconds: 250);
