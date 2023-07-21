@@ -1,5 +1,3 @@
-import 'dart:js';
-
 import 'package:flutter/material.dart';
 import 'package:kora_neza_home_services/screens/sign_up/sign_up_screen.dart';
 
