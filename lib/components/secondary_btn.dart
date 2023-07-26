@@ -24,6 +24,13 @@ class SecondaryButton extends StatelessWidget {
             color: kTextColor,
           ),
         ),
+        style: ElevatedButton.styleFrom(
+          padding: const EdgeInsets.fromLTRB(0, 8, 0, 8),
+          primary: kSecondaryColor,
+          onPrimary: kPrimaryColor,
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
+        ),
       ),
     );
   }
