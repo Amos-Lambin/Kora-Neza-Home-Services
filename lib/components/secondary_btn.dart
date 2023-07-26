@@ -17,19 +17,19 @@ class SecondaryButton extends StatelessWidget {
         onPressed: () {
           press();
         },
-        child: Text(
-          text,
-          style: TextStyle(
-            fontSize: getProportionateScreenWidth(18),
-            color: kTextColor,
-          ),
-        ),
         style: ElevatedButton.styleFrom(
           padding: const EdgeInsets.fromLTRB(0, 8, 0, 8),
           primary: kSecondaryColor,
           onPrimary: kPrimaryColor,
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
+        ),
+        child: Text(
+          text,
+          style: TextStyle(
+            fontSize: getProportionateScreenWidth(18),
+            color: kTextColor,
+          ),
         ),
       ),
     );
