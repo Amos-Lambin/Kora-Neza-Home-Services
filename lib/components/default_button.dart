@@ -1,5 +1,8 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 
+import '../constants.dart';
 import '../size_config.dart';
 
 class DefaultButton extends StatelessWidget {
@@ -16,6 +19,13 @@ class DefaultButton extends StatelessWidget {
         onPressed: () {
           press();
         },
+        style: ElevatedButton.styleFrom(
+          padding: const EdgeInsets.fromLTRB(0, 8, 0, 8),
+          primary: kPrimaryColor,
+          onPrimary: kSecondaryColor,
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
+        ),
         child: Text(
           text,
           style: TextStyle(
